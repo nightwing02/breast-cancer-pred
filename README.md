@@ -70,4 +70,3 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 - Scikit-learn: A powerful machine learning library in Python.
 - Pickle: A Python module for object serialization.
 
-Remember to customize the README based on your specific project details, including additional sections if necessary and providing proper attribution and licensing information.
