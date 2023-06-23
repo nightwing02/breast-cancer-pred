@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+{% block Content %}
+<html>
+
+<head>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet" />
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3"> </div>
+            <div class="col-sm-6">
+
+                <form action="/pred" method="post" for="form">
+
+                    <label>worst concave points</label>
+                    <input type="text" name="wcp" class="form-control">
+                    <label>worst radius</label>
+                    <input type="text" name="wr" class="form-control">
+                    <label>worst perimeter</label>
+                    <input type="text" name="wp" class="form-control">
+                    <br>
+                    <label>mean concave points</label>
+                    <input type="text" name="mcp" class="form-control">
+                    <label>mean perimeter</label>
+                    <input type="text" name="mp" class="form-control">
+                    <label>mean radius</label>
+                    <input type="text" name="mr" class="form-control">
+                    <br>
+                    <label>worst area</label>
+                    <input type="text" name="wa" class="form-control">
+                    <label>mean concavity</label>
+                    <input type="text" name="mc" class="form-control">
+                    <label>mean area</label>
+                    <input type="text" name="ma" class="form-control">
+                    <br>
+                    <label>worst concavity</label>
+                    <input type="text" name="wc" class="form-control">
+                    <label>worst texture</label>
+                    <input type="text" name="wt" class="form-control">
+                    <br>
+                    <input type="submit" class="btn btn-danger btn-md">
+                </form>
+                {% if pred is defined %}
+                    {% if pred == 1 %}
+                        <strong>Chances of occurence is High<span class="text-danger"></span></strong>
+                        <br/>
+                    {% else %}
+                    <strong>Chances of occurence is low<span class="text-danger"></span></strong>
+                    {% endif %}
+                
+   
+                {% endif %}
+           <br>
+
+
+            </div>
+            <div class="col-sm-3"> </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
+{% endblock%}
